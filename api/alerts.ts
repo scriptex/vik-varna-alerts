@@ -15,7 +15,74 @@ export default async function handler(_: VercelRequest, res: VercelResponse) {
 		const html = await page.text();
 		const $ = cheerio.load(html);
 		const alerts = $(ALERTS_SELECTOR);
-		const htmlContent = alerts.html();
+		const htmlContent = `
+<html>
+<head>
+	<style>
+	body {
+		font-family: sans-serif;
+		font-size: 100%;
+		line-height: 1.35;
+		margin: 0;
+	}
+
+	main {
+		max-width: 900px;
+		padding: 1rem;
+		margin: auto;
+	}
+
+	a {
+		color: #ef4c23;
+	}
+
+	h1,
+	h2,
+	p,
+	.list-item-date,
+	.list-item-text {
+		margin: 0 0 1rem;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	.list-item {
+		padding-top: 1rem;
+		border-top: 1px solid;
+	}
+
+	.list-item-date {
+		font-style: italic;
+	}
+
+	.pages {
+		text-align: center;
+	}
+
+	.pages a {
+		text-decoration: none;
+		min-width: 1.5rem;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0.25rem;
+		border: 1px solid;
+		margin: 0 0.5rem 0.5rem;
+		background: rgba(0,0,0,0.2);
+	}
+	</style>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+	<main>
+	${alerts.html()}
+	</main>
+</body>
+</html>
+`;
 
 		return res.status(200).send(htmlContent);
 	} catch (error) {
