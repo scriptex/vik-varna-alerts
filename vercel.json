@@ -1,4 +1,4 @@
 {
-	"crons": [{ "path": "/api/alerts", "schedule": "0 9 * * *" }],
+	"crons": [{ "path": "/api/email", "schedule": "0 9 * * *" }],
 	"redirects": [{ "source": "/", "destination": "/api/alerts", "permanent": false }]
 }
