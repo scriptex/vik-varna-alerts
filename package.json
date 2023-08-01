@@ -1,0 +1,38 @@
+{
+	"name": "vik-varna-alerts",
+	"version": "1.0.0",
+	"description": "Email and web notifications for planned repairs from ViK-Varna",
+	"keywords": [
+		"Alerts",
+		"Cron job",
+		"Email alerts",
+		"Notifications"
+	],
+	"homepage": "https://atanas.info/portfolio/open-source/vik-varna-alerts",
+	"bugs": {
+		"url": "https://github.com/scriptex/vik-varna-alerts/issues",
+		"email": "hi@atanas.info"
+	},
+	"license": "MIT",
+	"author": "Atanas Atanasov <hi@atanas.info> (https://atanas.info)",
+	"funding": "https://github.com/sponsors/scriptex",
+	"main": "api/alerts.ts",
+	"repository": {
+		"type": "git",
+		"url": "github:scriptex/vik-varna-alerts"
+	},
+	"scripts": {
+		"start": "vercel dev",
+		"build": "tsc"
+	},
+	"dependencies": {
+		"@sendinblue/client": "3.3.1",
+		"cheerio": "1.0.0-rc.12"
+	},
+	"type": "module",
+	"devDependencies": {
+		"@types/node": "20.4.5",
+		"typescript": "5.1.6",
+		"@vercel/node": "2.15.7"
+	}
+}

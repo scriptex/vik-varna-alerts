@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": ".",
+		"esModuleInterop": true,
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"outDir": "public",
+		"noImplicitAny": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"target": "ESNext"
+	},
+	"include": ["./api/**/*"],
+	"exclude": ["node_modules"]
+}
