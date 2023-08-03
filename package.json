@@ -33,6 +33,6 @@
 	"devDependencies": {
 		"@types/node": "20.4.5",
 		"typescript": "5.1.6",
-		"@vercel/node": "2.15.7"
+		"@vercel/node": "2.15.8"
 	}
 }
