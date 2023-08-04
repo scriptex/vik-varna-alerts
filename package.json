@@ -23,7 +23,8 @@
 	},
 	"scripts": {
 		"start": "vercel dev",
-		"build": "tsc"
+		"build": "rm -rf public && tsc",
+		"send-email": "yarn build && node ./scripts/send-email.mjs"
 	},
 	"dependencies": {
 		"@sendinblue/client": "3.3.1",
@@ -32,7 +33,8 @@
 	"type": "module",
 	"devDependencies": {
 		"@types/node": "20.4.7",
-		"typescript": "5.1.6",
-		"@vercel/node": "2.15.8"
+		"@vercel/node": "2.15.8",
+		"dotenv": "16.3.1",
+		"typescript": "5.1.6"
 	}
 }

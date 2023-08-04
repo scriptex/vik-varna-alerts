@@ -1,34 +1,18 @@
-import * as cheerio from 'cheerio';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { SendSmtpEmail, TransactionalEmailsApi } from '@sendinblue/client';
 
-const sendSMTPEmail = new SendSmtpEmail();
-const transactionalEmailsAPI = new TransactionalEmailsApi();
-
-const { EMAIL_TO, EMAIL_FROM, ALERTS_PAGE, EMAIL_SUBJECT, ALERTS_SELECTOR, SENDINBLUE_API_KEY } = process.env;
-
-transactionalEmailsAPI['authentications']['apiKey'].apiKey = SENDINBLUE_API_KEY || '';
+import { sendEmail, getPageContent, isInvalidEnvironment } from '../lib/index.js';
 
 export default async function handler(_: VercelRequest, res: VercelResponse) {
-	if (!EMAIL_TO || !EMAIL_FROM || !ALERTS_PAGE || !EMAIL_SUBJECT || !ALERTS_SELECTOR || !SENDINBLUE_API_KEY) {
+	if (isInvalidEnvironment(process.env)) {
 		res.status(400).send('Missing environmental variable(s).');
 
 		return;
 	}
 
 	try {
-		const page = await fetch(ALERTS_PAGE);
-		const html = await page.text();
-		const $ = cheerio.load(html);
-		const alerts = $(ALERTS_SELECTOR);
-		const htmlContent = alerts.html();
+		const alerts = await getPageContent(process.env.ALERTS_PAGE!, process.env.ALERTS_SELECTOR!);
 
-		sendSMTPEmail.to = [{ email: EMAIL_TO! }];
-		sendSMTPEmail.sender = { email: EMAIL_FROM };
-		sendSMTPEmail.subject = EMAIL_SUBJECT;
-		sendSMTPEmail.htmlContent = htmlContent || '';
-
-		await transactionalEmailsAPI.sendTransacEmail(sendSMTPEmail);
+		await sendEmail(process.env, alerts.html() || '');
 
 		return res.status(200).send('Email sent!');
 	} catch (error) {

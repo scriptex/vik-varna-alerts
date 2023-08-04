@@ -1,4 +1,4 @@
-# Известия за аварии от ВиК-Варна
+# ViK Varna Alerts
 
 [![Github Build](https://github.com/scriptex/vik-varna-alerts/workflows/Build/badge.svg)](https://github.com/scriptex/vik-varna-alerts/actions?query=workflow%3ABuild)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/34d3d75710534dc6a38c3584a1dcd068)](https://www.codacy.com/gh/scriptex/vik-varna-alerts/dashboard?utm_source=github.com&utm_medium=referral&utm_content=scriptex/vik-varna-alerts&utm_campaign=Badge_Grade)
@@ -8,6 +8,49 @@
 [![Analytics](https://ga-beacon-361907.ew.r.appspot.com/UA-83446952-1/github.com/scriptex/vik-varna-alerts/README.md?pixel)](https://github.com/scriptex/vik-varna-alerts/)
 
 > Email and web notifications for planned repairs from ViK-Varna
+
+## About
+
+ViK Varna (ВиК-Варна) is the local water supplier for Varna region in Bulgaria. They post notifications about planned repairs on their website but it is not possible to subscribe to those notifications and receive them immediately - instead one should check their website frequently.
+
+The code in this repository serves as a middleware between the website and the user - it sends hourly notifications on email which contain the latest news related to planned repairs and outages.
+
+The way the code is structured allows for integration with any other website which has a dedicated page for this purpose.
+
+## Usage
+
+In order to use this repository, one must clone it and adjust the repository secrets found under `settings/secrets/actions` in the repository and add their own configuration:
+
+```sh
+# The email address of the recipient of the notifications
+EMAIL_TO="recipient@example.com"
+
+# The email address of the sender of the notifications
+EMAIL_FROM="sender@example.com"
+
+# The web address (URL) of the page that contains the notifications
+ALERTS_PAGE="https://website.notifications/deep/link/"
+
+# The subject in the email
+EMAIL_SUBJECT="Planned outages and repairs"
+
+# The CSS selector for the HTML element which contains the notifications
+ALERTS_SELECTOR=".alerts-selector"
+
+# API key for Brevo (formerly known as Sendinblue)
+SENDINBLUE_API_KEY="abc-123"
+```
+
+## Available ways to use the code in this repository
+
+The code is deployed via Vercel and is running as serverless lambda functions which can be accessed here:
+
+-   [the page which contains the alerts](https://vik-varna-alerts.atanas.info/api/alerts)
+-   [the page which sends an email with the alerts](https://vik-varna-alerts.atanas.info/api/email)
+
+When forked and correctly set up, this repository creates a CRON job which sends an email at 0 (zero) o'clock each hour between 5:00 and 14:00 UTC.
+
+One can adjust this by modifying the parameters in the [action configuration](https://github.com/scriptex/vik-varna-alerts/blob/main/.github/workflows/send-email.yml)
 
 ## Visitor stats
 
