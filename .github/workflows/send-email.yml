@@ -1,0 +1,32 @@
+name: 'Send email'
+
+on:
+    schedule:
+        - cron: '0 5-14 * * *'
+
+jobs:
+    email:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [lts/*]
+
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: Send email
+              run: |
+                  yarn
+                  yarn build
+                  yarn send-email
+              env:
+                  EMAIL_TO: ${{ secrets.EMAIL_TO }}
+                  EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+                  ALERTS_PAGE: ${{ secrets.ALERTS_PAGE }}
+                  EMAIL_SUBJECT: ${{ secrets.EMAIL_SUBJECT }}
+                  ALERTS_SELECTOR: ${{ secrets.ALERTS_SELECTOR }}
+                  SENDINBLUE_API_KEY: ${{ secrets.SENDINBLUE_API_KEY }}
