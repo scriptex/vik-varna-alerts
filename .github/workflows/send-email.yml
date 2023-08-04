@@ -21,7 +21,6 @@ jobs:
             - name: Send email
               run: |
                   yarn
-                  yarn build
                   yarn send-email
               env:
                   EMAIL_TO: ${{ secrets.EMAIL_TO }}
