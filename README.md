@@ -1,6 +1,8 @@
 # ViK Varna Alerts
 
 [![Github Build](https://github.com/scriptex/vik-varna-alerts/workflows/Build/badge.svg)](https://github.com/scriptex/vik-varna-alerts/actions?query=workflow%3ABuild)
+[![Send email](https://github.com/scriptex/vik-varna-alerts/actions/workflows/send-email.yml/badge.svg)](https://github.com/scriptex/vik-varna-alerts/actions/workflows/send-email.yml)
+
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/34d3d75710534dc6a38c3584a1dcd068)](https://www.codacy.com/gh/scriptex/vik-varna-alerts/dashboard?utm_source=github.com&utm_medium=referral&utm_content=scriptex/vik-varna-alerts&utm_campaign=Badge_Grade)
 [![Codebeat Badge](https://codebeat.co/badges/d765a4c8-2c0e-44f2-89c3-fa364fdc14e6)](https://codebeat.co/projects/github-com-scriptex-vik-varna-alerts-master)
 [![CodeFactor Badge](https://www.codefactor.io/repository/github/scriptex/vik-varna-alerts/badge)](https://www.codefactor.io/repository/github/scriptex/vik-varna-alerts)
