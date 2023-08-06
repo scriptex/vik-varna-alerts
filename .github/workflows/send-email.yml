@@ -28,5 +28,7 @@ jobs:
                   EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
                   ALERTS_PAGE: ${{ secrets.ALERTS_PAGE }}
                   EMAIL_SUBJECT: ${{ secrets.EMAIL_SUBJECT }}
+                  DATE_SELECTOR: ${{ secrets.DATE_SELECTOR }}
                   ALERTS_SELECTOR: ${{ secrets.ALERTS_SELECTOR }}
+                  CHILD_CLASSNAME: ${{ secrets.CHILD_CLASSNAME }}
                   SENDINBLUE_API_KEY: ${{ secrets.SENDINBLUE_API_KEY }}

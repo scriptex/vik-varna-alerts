@@ -14,9 +14,16 @@ import { getPageContent, isInvalidEnvironment, sendEmail } from '../public/lib/i
 	}
 
 	try {
-		const alerts = await getPageContent(process.env.ALERTS_PAGE, process.env.ALERTS_SELECTOR);
+		const { ALERTS_PAGE, DATE_SELECTOR, CHILD_CLASSNAME, ALERTS_SELECTOR } = process.env;
 
-		await sendEmail(process.env, alerts.html() || '');
+		const alerts = await getPageContent({
+			url: ALERTS_PAGE,
+			dateSelector: DATE_SELECTOR,
+			childClassName: CHILD_CLASSNAME,
+			contentSelector: ALERTS_SELECTOR
+		});
+
+		await sendEmail(process.env, alerts || '');
 
 		console.log('Email sent!');
 	} catch (error) {
