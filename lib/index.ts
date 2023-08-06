@@ -3,6 +3,13 @@ import { SendSmtpEmail, CreateSmtpEmail, TransactionalEmailsApi } from '@sendinb
 
 import type { IncomingMessage } from 'node:http';
 
+export type PageContentOptions = {
+	url: string;
+	dateSelector: string;
+	childClassName: string;
+	contentSelector: string;
+};
+
 const style = `
 body {
     font-family: sans-serif;
@@ -71,12 +78,47 @@ export function getHTMLContent(text: string) {
 </html>`;
 }
 
-export async function getPageContent(url: string, selector: string) {
+export async function getPageContent({
+	url,
+	dateSelector,
+	childClassName,
+	contentSelector
+}: PageContentOptions): Promise<string> {
 	const page = await fetch(url);
 	const html = await page.text();
+	const now = new Date();
 	const $ = cheerio.load(html);
 
-	return $(selector);
+	now.setHours(0);
+	now.setMinutes(0);
+	now.setSeconds(0);
+	now.setMilliseconds(0);
+
+	let result = '';
+
+	$(contentSelector)
+		.children()
+		.each((_, el) => {
+			const $child = $(el);
+
+			if (!$child.hasClass(childClassName)) {
+				result += $child.html();
+			} else {
+				const [day, month, year] = $child.find(dateSelector).text().replace(' г.', '').split('.');
+
+				const date = new Date(
+					Number(year),
+					Number(month.startsWith('0') ? month[1] : month) - 1,
+					Number(day)
+				).getTime();
+
+				if (date >= now.getTime()) {
+					result += $child.html();
+				}
+			}
+		});
+
+	return result;
 }
 
 export function isInvalidEnvironment(env: NodeJS.ProcessEnv) {
@@ -85,7 +127,9 @@ export function isInvalidEnvironment(env: NodeJS.ProcessEnv) {
 		!env.EMAIL_FROM ||
 		!env.ALERTS_PAGE ||
 		!env.EMAIL_SUBJECT ||
+		!env.DATE_SELECTOR ||
 		!env.ALERTS_SELECTOR ||
+		!env.CHILD_CLASSNAME ||
 		!env.SENDINBLUE_API_KEY
 	);
 }
@@ -93,7 +137,11 @@ export function isInvalidEnvironment(env: NodeJS.ProcessEnv) {
 export async function sendEmail(
 	env: NodeJS.ProcessEnv,
 	htmlContent: string
-): Promise<{ response: IncomingMessage; body: CreateSmtpEmail }> {
+): Promise<{ response: IncomingMessage; body: CreateSmtpEmail } | void> {
+	if (!htmlContent) {
+		return;
+	}
+
 	const sendSMTPEmail = new SendSmtpEmail();
 	const transactionalEmailsAPI = new TransactionalEmailsApi();
 

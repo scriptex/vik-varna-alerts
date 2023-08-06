@@ -37,7 +37,13 @@ ALERTS_PAGE="https://website.notifications/deep/link/"
 EMAIL_SUBJECT="Planned outages and repairs"
 
 # The CSS selector for the HTML element which contains the notifications
+DATE_SELECTOR='.item-date-selector'
+
+# The CSS selector for the HTML element which contains the notifications
 ALERTS_SELECTOR=".alerts-selector"
+
+# A CSS class name for a single notification element
+CHILD_CLASSNAME='alert-item'
 
 # API key for Brevo (formerly known as Sendinblue)
 SENDINBLUE_API_KEY="abc-123"
