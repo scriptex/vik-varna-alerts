@@ -21,7 +21,7 @@ export default async function handler(_: VercelRequest, res: VercelResponse) {
 
 		await sendEmail(process.env, alerts || '');
 
-		return res.status(200).send('Email sent!');
+		return res.status(200).send(!alerts ? 'No updates found!' : 'Email sent!');
 	} catch (error) {
 		return res.status(500).send(error);
 	}

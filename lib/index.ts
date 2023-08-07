@@ -95,6 +95,7 @@ export async function getPageContent({
 	now.setMilliseconds(0);
 
 	let result = '';
+	let isEmpty = true;
 
 	$(contentSelector)
 		.children()
@@ -114,11 +115,12 @@ export async function getPageContent({
 
 				if (date >= now.getTime()) {
 					result += $child.html();
+					isEmpty = false;
 				}
 			}
 		});
 
-	return result;
+	return isEmpty ? '' : result;
 }
 
 export function isInvalidEnvironment(env: NodeJS.ProcessEnv) {
