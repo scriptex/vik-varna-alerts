@@ -25,7 +25,7 @@ import { getPageContent, isInvalidEnvironment, sendEmail } from '../public/lib/i
 
 		await sendEmail(process.env, alerts || '');
 
-		console.log('Email sent!');
+		console.log(!alerts ? 'No updates found!' : 'Email sent!');
 	} catch (error) {
 		console.error(error);
 	}
