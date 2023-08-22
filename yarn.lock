@@ -181,29 +181,29 @@
   resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-4.0.2.tgz#6286b4c7228d58ab7866d19716f3696e03a09397"
   integrity sha512-Q5vtl1W5ue16D+nIaW8JWebSSraJVlK+EthKn7e7UcD4KWsaSJ8BqGPXNaPghgtcn/fhvrN17Tv8ksUsQpiplw==
 
-"@vercel/build-utils@6.8.3":
-  version "6.8.3"
-  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-6.8.3.tgz#f4269c626eb108851f68815c036176718cecade1"
-  integrity sha512-C86OPuPAvG/pSr27DPKecmptkYYsgyhOKdHTLv9jI3Pv1yvru78k+JjrAyn7N+0ev75KNV0Prv4P3p76168ePw==
+"@vercel/build-utils@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-7.0.0.tgz#55edbf8af4abbf3cadec5c6701c7c049346f1a3a"
+  integrity sha512-R5cIyKwRsmrQ1BFIRezHqEJ7XR/dY/5dgwvZ8owSaaSbb7hTsYh86NUholRn+fGuSnRZbSLXmm4ILFto0rZ37A==
 
-"@vercel/error-utils@1.0.10":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@vercel/error-utils/-/error-utils-1.0.10.tgz#6530e9c930d5cf4c7f96045ec3a0bccaf2e6b14c"
-  integrity sha512-nsKy2sy+pjUWyKI1V/XXKspVzHMYgSalmj5+EsKWFXZbnNZicqxNtMR94J8Hs7SB4TQxh0s4KhczJtL59AVGMg==
+"@vercel/error-utils@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@vercel/error-utils/-/error-utils-2.0.0.tgz#fcf5ffe1c3871556770c78ec91b750b575b26c59"
+  integrity sha512-jxuxVcm22P375DUQPLgT7BaKasHu7ASjwU9GEMEkF4Qea3hIBWComCPqeQ0d/qwSFWiXkxWK+/9RlvFk/oAs4A==
 
-"@vercel/node@2.15.10":
-  version "2.15.10"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-2.15.10.tgz#8b84840e21c566df6318932c8c493f8970b75d39"
-  integrity sha512-IfnqnKAJlL1+0FSDJgxoe9J3kfYAgPGDjz4aO/H5FSjvqP7cKJnns1F9GsQq4pM499+TY8T8mKAdos7/m+WOEw==
+"@vercel/node@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-3.0.0.tgz#f6e3b0b6b9741b62e27bb49b542b38c2d2704767"
+  integrity sha512-Naw4e6Q4dSHcdGjTzMIVGf4yEUzzgPJcRzbc4OLTbiX1DILHIX2znkZEvwbP+VN5m7DSqHSWwAbGn9I/Rys2ng==
   dependencies:
     "@edge-runtime/node-utils" "2.0.3"
     "@edge-runtime/primitives" "2.1.2"
     "@edge-runtime/vm" "3.0.1"
     "@types/node" "14.18.33"
     "@types/node-fetch" "2.6.3"
-    "@vercel/build-utils" "6.8.3"
-    "@vercel/error-utils" "1.0.10"
-    "@vercel/static-config" "2.0.17"
+    "@vercel/build-utils" "7.0.0"
+    "@vercel/error-utils" "2.0.0"
+    "@vercel/static-config" "3.0.0"
     async-listen "3.0.0"
     content-type "1.0.5"
     edge-runtime "2.4.4"
@@ -215,10 +215,10 @@
     ts-node "10.9.1"
     typescript "4.9.5"
 
-"@vercel/static-config@2.0.17":
-  version "2.0.17"
-  resolved "https://registry.yarnpkg.com/@vercel/static-config/-/static-config-2.0.17.tgz#2198e0a29c3f41adb6f074c99b6d42b19b57b401"
-  integrity sha512-2f50OTVrN07x7pH+XNW0e7cj7T+Ufg+19+a2N3/XZBjQmV+FaMlmSLiaQ4tBxp2H8lWWHzENua7ZSSQPtRZ3/A==
+"@vercel/static-config@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@vercel/static-config/-/static-config-3.0.0.tgz#2bd56aa08d1293f0982ca3a5923412550bf64bfe"
+  integrity sha512-2qtvcBJ1bGY0dYGYh3iM7yGKkk971FujLEDXzuW5wcZsPr1GSEjO/w2iSr3qve6nDDtBImsGoDEnus5FI4+fIw==
   dependencies:
     ajv "8.6.3"
     json-schema-to-ts "1.6.4"
