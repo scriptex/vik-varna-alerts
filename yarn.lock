@@ -163,26 +163,26 @@
   resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-4.0.2.tgz#6286b4c7228d58ab7866d19716f3696e03a09397"
   integrity sha512-Q5vtl1W5ue16D+nIaW8JWebSSraJVlK+EthKn7e7UcD4KWsaSJ8BqGPXNaPghgtcn/fhvrN17Tv8ksUsQpiplw==
 
-"@vercel/build-utils@7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-7.1.0.tgz#50652c82439aa13a8fdb422dcfa607c72ae28667"
-  integrity sha512-NoeBoZIueYUpuQc6W+4YuN3+XgxcuuQwZdahw1bfO2pWuWK4ikoZNHfSACyA/BL2j2LqjRBxIhVOI08CnPCXcA==
+"@vercel/build-utils@7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-7.1.1.tgz#d0432768afe24b1bfb9d8e0fa7ccbfc0276fbc7a"
+  integrity sha512-JThOdCyvlgH8tLQYvm/yjwPnOrld26MqVObQ75Cm3PjdDpagwNq42Vb7vgqdpOJje7IZCQ2i1vFQIQiTFVIvtw==
 
 "@vercel/error-utils@2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@vercel/error-utils/-/error-utils-2.0.1.tgz#ea16a69542fe18013ff4f4a93dfc0d2fea9cae64"
   integrity sha512-ZUVpRFArh5eyKpJmdfEuCaMpZKQvZgUq0pQ7PdK8m5FgRYEvF4I0TMJH3JnkbYaMMUH82aYWZr+/hFJtEBcmTQ==
 
-"@vercel/node@3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-3.0.3.tgz#05a029af149235354bbd0f8cf58715e0da9ef651"
-  integrity sha512-BePloH9Rh09zi9pXw0MtzVnoVDvD6Rty1Kt94KensUZf0r0YSqYXtjWJwAMvXffjF1smr9COwxglrtZ93c7+ng==
+"@vercel/node@3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-3.0.4.tgz#8ef757588323825b5bcbe4995bedb37575c3dd59"
+  integrity sha512-HePXFOMZTnuMgUd7x7yj/hxXzMw431ui0ApkBKvtte72Hlquagjz04pjo2nHKms4OREOuHTGsNxsd+MQ5oNfYg==
   dependencies:
     "@edge-runtime/node-utils" "2.2.0"
     "@edge-runtime/primitives" "3.1.0"
     "@edge-runtime/vm" "3.1.0"
     "@types/node" "14.18.33"
-    "@vercel/build-utils" "7.1.0"
+    "@vercel/build-utils" "7.1.1"
     "@vercel/error-utils" "2.0.1"
     "@vercel/static-config" "3.0.0"
     async-listen "3.0.0"
