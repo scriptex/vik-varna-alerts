@@ -26,17 +26,22 @@
   dependencies:
     "@edge-runtime/cookies" "3.4.1"
 
-"@edge-runtime/primitives@3.1.1":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@edge-runtime/primitives/-/primitives-3.1.1.tgz#45c97f492ad06272136024122c4b639241f9b0f9"
-  integrity sha512-ROO22py+KdAfzqWZu6CtVMC4qV6mS0W1jPI51jGXE+uenyBUN7cQTWB9ReQc8Bm4cnjqmhajvpqEx3j7Y9iSOg==
+"@edge-runtime/ponyfill@2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@edge-runtime/ponyfill/-/ponyfill-2.4.1.tgz#0fbe567c8dd40d63c2d716c04e6df77636f3feaf"
+  integrity sha512-ZbR/EViY3gg2rmEAQTKPa6mXl4aR1/+cFcQe4r1segCjEbTAxT6PWu40odbu/KlZKSysEb2O/BWIC2lJgSJOMQ==
 
-"@edge-runtime/vm@3.1.1":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@edge-runtime/vm/-/vm-3.1.1.tgz#1693bd43ceffb28eb34b852f375eb939d9ec134c"
-  integrity sha512-6NJRRG04/91qnWLZj+wZm27q6fJkTbkZdIJdo/Ig++GTxkAv8Wh/45nIcz9Xg7AzIAMpAkflFdiCrCoZ3hp1Iw==
+"@edge-runtime/primitives@4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@edge-runtime/primitives/-/primitives-4.0.5.tgz#67b4f555816d7c8cb32a05da0b3c2cac32a70f1c"
+  integrity sha512-t7QiN5d/KpXgCvIfSt6Nm9Hj3WVdNgc5CpOD73jasY+9EvTI7Ngdj5cXvjcHrPcmYWJZMySPgeEeoL/1N/Llag==
+
+"@edge-runtime/vm@3.1.7":
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/@edge-runtime/vm/-/vm-3.1.7.tgz#74f3bc64220c07ca0c760e5686726651a3835dc4"
+  integrity sha512-hUMFbDQ/nZN+1TLMi6iMO1QFz9RSV8yGG8S42WFPFma1d7VSNE0eMdJUmwjmtav22/iQkzHMmu6oTSfAvRGS8g==
   dependencies:
-    "@edge-runtime/primitives" "3.1.1"
+    "@edge-runtime/primitives" "4.0.5"
 
 "@jridgewell/resolve-uri@^3.0.3":
   version "3.1.1"
@@ -188,15 +193,15 @@
   resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-4.0.2.tgz#6286b4c7228d58ab7866d19716f3696e03a09397"
   integrity sha512-Q5vtl1W5ue16D+nIaW8JWebSSraJVlK+EthKn7e7UcD4KWsaSJ8BqGPXNaPghgtcn/fhvrN17Tv8ksUsQpiplw==
 
-"@vercel/build-utils@7.2.2":
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-7.2.2.tgz#8d9aef0f590dad0bc3f1d2f3f3b7bb29777eefa4"
-  integrity sha512-CUMgVKTJCba5tGe+KZaVvwGUCsuSeuNEmPIzMggIMDtzdqllRu8+QjjIhEI+unHoYvUgGfen6Z5lMeMo9Ne0qQ==
+"@vercel/build-utils@7.2.3":
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-7.2.3.tgz#24180fc67392fe4c42f548992faee695ce267f11"
+  integrity sha512-mo1w4SXUN+obQlg9wMTdc9xLJnrfubpreZmOTyK70icOcCEOXP5sKm044/PM2GZrzkWIXYYAfcMxNnOmWQMR0g==
 
-"@vercel/error-utils@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@vercel/error-utils/-/error-utils-2.0.1.tgz#ea16a69542fe18013ff4f4a93dfc0d2fea9cae64"
-  integrity sha512-ZUVpRFArh5eyKpJmdfEuCaMpZKQvZgUq0pQ7PdK8m5FgRYEvF4I0TMJH3JnkbYaMMUH82aYWZr+/hFJtEBcmTQ==
+"@vercel/error-utils@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@vercel/error-utils/-/error-utils-2.0.2.tgz#d75ccce100dbdfc9cb85700767b59d4257a91113"
+  integrity sha512-Sj0LFafGpYr6pfCqrQ82X6ukRl5qpmVrHM/191kNYFqkkB9YkjlMAj6QcEsvCG259x4QZ7Tya++0AB85NDPbKQ==
 
 "@vercel/nft@0.24.2":
   version "0.24.2"
@@ -215,21 +220,21 @@
     node-gyp-build "^4.2.2"
     resolve-from "^5.0.0"
 
-"@vercel/node@3.0.7":
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-3.0.7.tgz#93d6c1f89f1a1a5110a9b6f9cdd2f5d19d2712c3"
-  integrity sha512-0KrDGi6z+qPtCyC7wSHmHDU/ot352AJpAeAO1OIEYqYFsYwzvwuyu7TbGGwiUbtolij4/EBUCls3YmwADM/vKw==
+"@vercel/node@3.0.8":
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-3.0.8.tgz#c5dea511d0c1a16d096820688a34bdb2962f2c9b"
+  integrity sha512-giEPiPgynLNOLsU2qvpoeHJi2YVi3lwJUkxlyByxNL8683BgGF9+c4ResXRzesHCVrl2WzAKL8iAh59htKNyzg==
   dependencies:
     "@edge-runtime/node-utils" "2.2.1"
-    "@edge-runtime/primitives" "3.1.1"
-    "@edge-runtime/vm" "3.1.1"
+    "@edge-runtime/primitives" "4.0.5"
+    "@edge-runtime/vm" "3.1.7"
     "@types/node" "14.18.33"
-    "@vercel/build-utils" "7.2.2"
-    "@vercel/error-utils" "2.0.1"
+    "@vercel/build-utils" "7.2.3"
+    "@vercel/error-utils" "2.0.2"
     "@vercel/nft" "0.24.2"
     "@vercel/static-config" "3.0.0"
     async-listen "3.0.0"
-    edge-runtime "2.5.1"
+    edge-runtime "2.5.7"
     esbuild "0.14.47"
     etag "1.8.1"
     exit-hook "2.2.1"
@@ -577,17 +582,17 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
-edge-runtime@2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/edge-runtime/-/edge-runtime-2.5.1.tgz#70591ba5746bf02edb4e616dc116ccf5954d458e"
-  integrity sha512-E0kY1Dqvwvk9yh7dvR56KnCjXf/dlbrrGjO5Sjnz9Ja3WqYT3csv2B8O4erxJiOWfWy9NTukBk4Kb3yrR66gBw==
+edge-runtime@2.5.7:
+  version "2.5.7"
+  resolved "https://registry.yarnpkg.com/edge-runtime/-/edge-runtime-2.5.7.tgz#12638b86e00811cd1f2b4ca0d70330ca71281423"
+  integrity sha512-gA4qSVP0sNwJlkdQ2nahDPASlSl8twUd17o+JolPa1EtXpLTGzIpOETvodgJwXIxa+zaD8bnAXCdsWrx2PhlVQ==
   dependencies:
     "@edge-runtime/format" "2.2.0"
-    "@edge-runtime/vm" "3.1.1"
+    "@edge-runtime/ponyfill" "2.4.1"
+    "@edge-runtime/vm" "3.1.7"
     async-listen "3.0.1"
     mri "1.2.0"
     picocolors "1.0.0"
-    pretty-bytes "5.6.0"
     pretty-ms "7.0.1"
     signal-exit "4.0.2"
     time-span "4.0.0"
@@ -1212,11 +1217,6 @@ picomatch@^2.2.2, picomatch@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
-
-pretty-bytes@5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.6.0.tgz#356256f643804773c82f64723fe78c92c62beaeb"
-  integrity sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==
 
 pretty-ms@7.0.1:
   version "7.0.1"
