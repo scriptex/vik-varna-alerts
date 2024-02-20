@@ -34,7 +34,7 @@
 	"devDependencies": {
 		"@types/node": "20.11.19",
 		"@vercel/node": "3.0.19",
-		"dotenv": "16.4.4",
+		"dotenv": "16.4.5",
 		"typescript": "5.3.3"
 	}
 }
