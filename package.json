@@ -33,7 +33,7 @@
 	"type": "module",
 	"devDependencies": {
 		"@types/node": "20.11.30",
-		"@vercel/node": "3.0.24",
+		"@vercel/node": "3.0.25",
 		"dotenv": "16.4.5",
 		"typescript": "5.4.3"
 	}
