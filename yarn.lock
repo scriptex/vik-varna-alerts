@@ -191,10 +191,10 @@
   resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-4.0.2.tgz#6286b4c7228d58ab7866d19716f3696e03a09397"
   integrity sha512-Q5vtl1W5ue16D+nIaW8JWebSSraJVlK+EthKn7e7UcD4KWsaSJ8BqGPXNaPghgtcn/fhvrN17Tv8ksUsQpiplw==
 
-"@vercel/build-utils@8.1.2":
-  version "8.1.2"
-  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-8.1.2.tgz#6ecb8fbf1bd91019a2711f59bd860754eee42add"
-  integrity sha512-8aGftLLJjv6YfSyRvOgnmT/9NerpMJxS83MfQbJ2yZ6vGUk4A7qcQxIVDEJkP1nqDiMXdGnmypERWp0mv5VQbw==
+"@vercel/build-utils@8.1.3":
+  version "8.1.3"
+  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-8.1.3.tgz#39d2f84b603a75a8907e8b20931ca2c5d72773fa"
+  integrity sha512-Ksy+0nE180wv5lHBKfVqwdp+IBPvkrtYnscOH3X1304Gsrl6bkuQzlRq14z05vbKIXPqwFY1+dnJPe66i7g6OA==
 
 "@vercel/error-utils@2.0.2":
   version "2.0.2"
@@ -219,16 +219,16 @@
     node-gyp-build "^4.2.2"
     resolve-from "^5.0.0"
 
-"@vercel/node@3.1.3":
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-3.1.3.tgz#1314c2806f3be23156bb0a7d1ee460f7f4639744"
-  integrity sha512-N4tylb25SoAVfslh0bE+OqelbeIFu9etOwz7Bb7n5HLdO9ZLvRl7qRfmENTV8RleC6nBatJmJHJlbBqx+OWoFQ==
+"@vercel/node@3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-3.1.4.tgz#bad45f8ad8e9a4d2014f9bbd1bb238536230e9f4"
+  integrity sha512-JcYcNgeApY9PiWvaA8EUvjDsoq7RBmb0KopftFXwSz/yW0EFXWEqKcZmFtgGfVKyJPqD06aZ+9XDz8GjCHElEw==
   dependencies:
     "@edge-runtime/node-utils" "2.3.0"
     "@edge-runtime/primitives" "4.1.0"
     "@edge-runtime/vm" "3.2.0"
     "@types/node" "16.18.11"
-    "@vercel/build-utils" "8.1.2"
+    "@vercel/build-utils" "8.1.3"
     "@vercel/error-utils" "2.0.2"
     "@vercel/nft" "0.27.0"
     "@vercel/static-config" "3.0.0"
