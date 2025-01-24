@@ -11,15 +11,27 @@ export default async function handler(_: VercelRequest, res: VercelResponse) {
 
 	try {
 		const { ALERTS_PAGE, DATE_SELECTOR, CHILD_CLASSNAME, ALERTS_SELECTOR } = process.env;
+		const pages = JSON.parse(ALERTS_PAGE!);
+		const alerts = [];
 
-		const alerts = await getPageContent({
-			url: ALERTS_PAGE!,
-			dateSelector: DATE_SELECTOR!,
-			childClassName: CHILD_CLASSNAME!,
-			contentSelector: ALERTS_SELECTOR!
-		});
+		for (const page of pages) {
+			const result = await getPageContent({
+				url: page,
+				dateSelector: DATE_SELECTOR!,
+				childClassName: CHILD_CLASSNAME!,
+				contentSelector: ALERTS_SELECTOR!
+			});
 
-		return res.status(200).send(getHTMLContent(alerts ?? ''));
+			const { origin, pathname, searchParams } = new URL(page);
+			const url = `${origin}${pathname}?${Array.from(searchParams.entries())
+				.map(([key, value]) => `${key}=${value}`)
+				.join('&amp;')}`;
+
+			alerts.push(`<h1><a href="${url}" target="_blank">${url}</a></h1>`);
+			alerts.push(result);
+		}
+
+		return res.status(200).send(getHTMLContent(alerts.join('')));
 	} catch (error) {
 		return res.status(500).send(error);
 	}
