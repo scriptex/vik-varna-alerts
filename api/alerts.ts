@@ -31,7 +31,7 @@ export default async function handler(_: VercelRequest, res: VercelResponse) {
 			alerts.push(result);
 		}
 
-		return res.status(200).send(getHTMLContent(alerts.join('') ?? ''));
+		return res.status(200).send(getHTMLContent(alerts.join('')));
 	} catch (error) {
 		return res.status(500).send(error);
 	}
