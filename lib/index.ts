@@ -24,6 +24,14 @@ main {
     margin: auto;
 }
 
+h1 {
+	margin-bottom: 1em;
+}
+
+h1:not(:first-child) {
+	margin: 1em 0;
+}
+
 a {
     color: #ef4c23;
 }
