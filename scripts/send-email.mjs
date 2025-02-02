@@ -4,7 +4,8 @@ import { config } from 'dotenv';
 
 config();
 
-import { getPageContent, isInvalidEnvironment, sendEmail } from '../public/lib/index.js';
+import { isInvalidEnvironment, sendEmail } from '../public/lib/index.js';
+import { collect } from '../public/lib/collect.js';
 
 (async () => {
 	if (isInvalidEnvironment(process.env)) {
@@ -14,26 +15,11 @@ import { getPageContent, isInvalidEnvironment, sendEmail } from '../public/lib/i
 	}
 
 	try {
-		const { ALERTS_PAGE, DATE_SELECTOR, CHILD_CLASSNAME, ALERTS_SELECTOR } = process.env;
-		const pages = JSON.parse(ALERTS_PAGE);
-		const alerts = [];
+		const alerts = await collect(false);
 
-		for (const page of pages) {
-			const result = await getPageContent({
-				url: page,
-				dateSelector: DATE_SELECTOR,
-				childClassName: CHILD_CLASSNAME,
-				contentSelector: ALERTS_SELECTOR
-			});
+		await sendEmail(process.env, alerts || '');
 
-			alerts.push(result);
-		}
-
-		const content = alerts.join('');
-
-		await sendEmail(process.env, content || '');
-
-		console.log(!content ? 'No updates found!' : 'Email sent!');
+		console.log(!alerts ? 'No updates found!' : 'Email sent!');
 	} catch (error) {
 		console.error(error);
 	}
