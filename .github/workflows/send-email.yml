@@ -14,13 +14,13 @@ jobs:
                 node-version: [lts/*]
 
         steps:
-            - uses: hmarr/debug-action@v3
             - uses: actions/checkout@v4
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
             - name: Send email
+              uses: hmarr/debug-action@v3
               run: |
                   yarn
                   yarn send-email
