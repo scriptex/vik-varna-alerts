@@ -11,7 +11,6 @@ export default async function handler(_: VercelRequest, res: VercelResponse) {
 
 	try {
 		const { ALERTS_PAGE, DATE_SELECTOR, CHILD_CLASSNAME, ALERTS_SELECTOR } = process.env;
-		console.log(ALERTS_PAGE);
 		const pages = JSON.parse(ALERTS_PAGE!);
 		const alerts = [];
 
@@ -32,7 +31,6 @@ export default async function handler(_: VercelRequest, res: VercelResponse) {
 
 		return res.status(200).send(!content ? 'No updates found!' : 'Email sent!');
 	} catch (error) {
-		console.log(error);
 		return res.status(500).send(error);
 	}
 }
