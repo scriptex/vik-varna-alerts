@@ -25,9 +25,11 @@ export default async function handler(_: VercelRequest, res: VercelResponse) {
 			alerts.push(result);
 		}
 
-		await sendEmail(process.env, alerts.join('') || '');
+		const content = alerts.join('');
 
-		return res.status(200).send(!alerts ? 'No updates found!' : 'Email sent!');
+		await sendEmail(process.env, content || '');
+
+		return res.status(200).send(!content ? 'No updates found!' : 'Email sent!');
 	} catch (error) {
 		return res.status(500).send(error);
 	}
