@@ -20,7 +20,6 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
             - name: Send email
-              uses: hmarr/debug-action@v3
               run: |
                   yarn
                   yarn send-email

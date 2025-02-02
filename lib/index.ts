@@ -132,6 +132,7 @@ export async function getPageContent({
 	childClassName,
 	contentSelector
 }: PageContentOptions): Promise<string> {
+	console.log(url);
 	const page = await fetch(url);
 	const html = await page.text();
 	const now = new Date();
