@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-import { sendEmail, getPageContent, isInvalidEnvironment } from '../lib/index.js';
+import { sendEmail, isInvalidEnvironment } from '../lib/index.js';
+import { collect } from '../lib/collect.js';
 
 export default async function handler(_: VercelRequest, res: VercelResponse) {
 	if (isInvalidEnvironment(process.env)) {
@@ -10,26 +11,11 @@ export default async function handler(_: VercelRequest, res: VercelResponse) {
 	}
 
 	try {
-		const { ALERTS_PAGE, DATE_SELECTOR, CHILD_CLASSNAME, ALERTS_SELECTOR } = process.env;
-		const pages = JSON.parse(ALERTS_PAGE!);
-		const alerts = [];
+		const alerts = await collect(false);
 
-		for (const page of pages) {
-			const result = await getPageContent({
-				url: page,
-				dateSelector: DATE_SELECTOR!,
-				childClassName: CHILD_CLASSNAME!,
-				contentSelector: ALERTS_SELECTOR!
-			});
+		await sendEmail(process.env, alerts || '');
 
-			alerts.push(result);
-		}
-
-		const content = alerts.join('');
-
-		await sendEmail(process.env, content || '');
-
-		return res.status(200).send(!content ? 'No updates found!' : 'Email sent!');
+		return res.status(200).send(!alerts ? 'No updates found!' : 'Email sent!');
 	} catch (error) {
 		return res.status(500).send(error);
 	}
