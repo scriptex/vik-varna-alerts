@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-import { getHTMLContent, getPageContent, isInvalidEnvironment } from '../lib/index.js';
+import { getHTMLContent, isInvalidEnvironment } from '../lib/index.js';
 import { collect } from '../lib/collect.js';
 
 export default async function handler(_: VercelRequest, res: VercelResponse) {
