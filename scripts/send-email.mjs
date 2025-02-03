@@ -17,7 +17,7 @@ import { collect } from '../public/lib/collect.js';
 	try {
 		const alerts = await collect(false);
 
-		await sendEmail(process.env, alerts || '');
+		await sendEmail(process.env, alerts);
 
 		console.log(!alerts ? 'No updates found!' : 'Email sent!');
 	} catch (error) {

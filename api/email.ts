@@ -13,7 +13,7 @@ export default async function handler(_: VercelRequest, res: VercelResponse) {
 	try {
 		const alerts = await collect(false);
 
-		await sendEmail(process.env, alerts || '');
+		await sendEmail(process.env, alerts);
 
 		return res.status(200).send(!alerts ? 'No updates found!' : 'Email sent!');
 	} catch (error) {
