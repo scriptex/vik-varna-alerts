@@ -199,10 +199,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.11.tgz#cbb15c12ca7c16c85a72b6bdc4d4b01151bb3cae"
   integrity sha512-3oJbGBUWuS6ahSnEq1eN2XrCyf4YsWI8OyCvo7c64zQJNplk3mO84t53o8lfTk+2ji59g5ycfc6qQ3fdHliHuA==
 
-"@types/node@22.13.10":
-  version "22.13.10"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.13.10.tgz#df9ea358c5ed991266becc3109dc2dc9125d77e4"
-  integrity sha512-I6LPUvlRH+O6VRUqYOcMudhaIdUVWfsjnZavnsraHvpBwaEyMN29ry+0UVJhImYL16xsscu0aske3yA+uPOWfw==
+"@types/node@22.13.13":
+  version "22.13.13"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.13.13.tgz#5e7d110fb509b0d4a43fbf48fa9d6e0f83e1b1e7"
+  integrity sha512-ClsL5nMwKaBRwPcCvH8E7+nU4GxHVx1axNvMZTFHMEfNI7oahimt26P5zjVCRrjiIWj6YFXfE1v3dEp94wLcGQ==
   dependencies:
     undici-types "~6.20.0"
 
@@ -221,10 +221,10 @@
   resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-4.0.5.tgz#cb6e2a691b70cb177c6e3ae9c1d2e8b2ea8cd304"
   integrity sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==
 
-"@vercel/build-utils@10.5.0":
-  version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-10.5.0.tgz#79880a6c98cba338083c44560acd97713fcec73c"
-  integrity sha512-oJ2pDppFAXJI2sglV9PdSUYgccX7DMG084D6qffQgVayrl8/YXbn0iOtEFy0NL3ewrqBFXKQi3sOuk5NcFwofQ==
+"@vercel/build-utils@10.5.1":
+  version "10.5.1"
+  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-10.5.1.tgz#54698c01103b4dbd200dc98398ab405df14d4f86"
+  integrity sha512-BtqwEmU1AoITpd0KxYrdQOwyKZL8RKba+bWxI8mr3gXPQZWRAE9ok1zF0AXfvMGCstYPHBPNolZGDSfWmY2jqg==
 
 "@vercel/error-utils@2.0.3":
   version "2.0.3"
@@ -249,16 +249,16 @@
     picomatch "^4.0.2"
     resolve-from "^5.0.0"
 
-"@vercel/node@5.1.13":
-  version "5.1.13"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-5.1.13.tgz#2289e46c908767f8f2603bdd44bf65dc74d02415"
-  integrity sha512-3Ojnnfd3z8e2iu3Pbu5lZgig6kkPRK0HaOqbmMG0iEHjE+ukkJ12DoHrmdqz9A/e2bINEkqsHMaMTmWP2N86/w==
+"@vercel/node@5.1.14":
+  version "5.1.14"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-5.1.14.tgz#74bfd4fce97788cb55aab64225d52a002d67811b"
+  integrity sha512-kLXAR4ZtNSXJw5ffIzKPDAVHD4/Dwxw/287ZCnQlqtOQzY3IH1E5QM3nxn0LGfTkYxXpQFFOOcXL7fZW7MjC6A==
   dependencies:
     "@edge-runtime/node-utils" "2.3.0"
     "@edge-runtime/primitives" "4.1.0"
     "@edge-runtime/vm" "3.2.0"
     "@types/node" "16.18.11"
-    "@vercel/build-utils" "10.5.0"
+    "@vercel/build-utils" "10.5.1"
     "@vercel/error-utils" "2.0.3"
     "@vercel/nft" "0.27.10"
     "@vercel/static-config" "3.0.0"
