@@ -28,12 +28,12 @@
 	},
 	"dependencies": {
 		"@sendinblue/client": "3.3.1",
-		"cheerio": "1.0.0"
+		"cheerio": "1.1.0"
 	},
 	"type": "module",
 	"devDependencies": {
 		"@types/node": "22.15.31",
-		"@vercel/node": "5.1.16",
+		"@vercel/node": "5.2.2",
 		"dotenv": "16.5.0",
 		"typescript": "5.8.3"
 	}
