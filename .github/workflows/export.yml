@@ -1,0 +1,24 @@
+name: Export Secrets
+on:
+    workflow_dispatch:
+
+jobs:
+    export:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Generate env file
+              run: |
+                  echo "EMAIL_TO=${{ secrets.EMAIL_TO }}" >> .env
+                  echo "EMAIL_FROM=${{ secrets.EMAIL_FROM }}" >> .env
+                  echo "ALERTS_PAGE=${{ secrets.ALERTS_PAGE }}" >> .env
+                  echo "EMAIL_SUBJECT=${{ secrets.EMAIL_SUBJECT }}" >> .env
+                  echo "DATE_SELECTOR=${{ secrets.DATE_SELECTOR }}" >> .env
+                  echo "ALERTS_SELECTOR=${{ secrets.ALERTS_SELECTOR }}" >> .env
+                  echo "CHILD_CLASSNAME=${{ secrets.CHILD_CLASSNAME }}" >> .env
+                  echo "SENDINBLUE_API_KEY=${{ secrets.SENDINBLUE_API_KEY }}" >> .env
+
+            - name: Upload artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: env-secrets
+                  path: .env
