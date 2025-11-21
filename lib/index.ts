@@ -196,7 +196,8 @@ export function isInvalidEnvironment(env: NodeJS.ProcessEnv) {
 		!env.DATE_SELECTOR ||
 		!env.ALERTS_SELECTOR ||
 		!env.CHILD_CLASSNAME ||
-		!env.SENDINBLUE_API_KEY
+		!env.SENDINBLUE_API_KEY ||
+		!env.KEYWORDS
 	);
 }
 
