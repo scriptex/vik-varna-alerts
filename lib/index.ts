@@ -8,6 +8,7 @@ export type PageContentOptions = {
 	dateSelector: string;
 	childClassName: string;
 	contentSelector: string;
+	keywordsString: string;
 };
 
 const style = `
@@ -130,12 +131,21 @@ export async function getPageContent({
 	url,
 	dateSelector,
 	childClassName,
-	contentSelector
+	contentSelector,
+	keywordsString
 }: PageContentOptions): Promise<string> {
 	const page = await fetch(url);
 	const html = await page.text();
 	const now = new Date();
 	const $ = cheerio.load(html);
+
+	let keywords: string[] = [];
+
+	try {
+		keywords = JSON.parse(keywordsString);
+	} catch (e) {
+		console.error(e);
+	}
 
 	now.setHours(0);
 	now.setMinutes(0);
@@ -161,7 +171,13 @@ export async function getPageContent({
 					Number(day)
 				).getTime();
 
-				if (date >= now.getTime()) {
+				const childText = $child.text().toLowerCase().trim();
+				const hasMatch =
+					Array.isArray(keywords) && keywords.length > 0
+						? keywords.some(keyword => childText.includes(keyword.toLowerCase().trim()))
+						: true;
+
+				if (date >= now.getTime() && hasMatch) {
 					result += $child.html();
 					isEmpty = false;
 				}
