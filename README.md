@@ -25,28 +25,31 @@ In order to use this repository, one must clone it and adjust the repository sec
 
 ```sh
 # The email address of the recipient of the notifications
-EMAIL_TO="recipient@example.com"
+EMAIL_TO='recipient@example.com'
 
 # The email address of the sender of the notifications
-EMAIL_FROM="sender@example.com"
+EMAIL_FROM='sender@example.com'
 
 # The web address (URL) of the page that contains the notifications
-ALERTS_PAGE="['https://website.notifications/deep/link/1', https://website.notifications/deep/link/2]"
+ALERTS_PAGE='["https://website.notifications/deep/link/1", "https://website.notifications/deep/link/2", "https://vikvarna.com/bg/messages/breakdown.html"]'
 
 # The subject in the email
-EMAIL_SUBJECT="Planned outages and repairs"
+EMAIL_SUBJECT='Planned outages and repairs'
+
+# The CSS selector for the HTML element which contains the notification date
+DATE_SELECTOR='.list-item-date'
 
 # The CSS selector for the HTML element which contains the notifications
-DATE_SELECTOR='.item-date-selector'
-
-# The CSS selector for the HTML element which contains the notifications
-ALERTS_SELECTOR=".alerts-selector"
+ALERTS_SELECTOR="#main_content"
 
 # A CSS class name for a single notification element
-CHILD_CLASSNAME='alert-item'
+CHILD_CLASSNAME='list-item'
 
 # API key for Brevo (formerly known as Sendinblue)
 SENDINBLUE_API_KEY="abc-123"
+
+# List of keywords to search for in a notification
+KEYWORDS='["keyword1", "keyword2", "keyword3"]'
 ```
 
 ## Available ways to use the code in this repository

@@ -1,7 +1,7 @@
 import { getPageContent } from './index.js';
 
 export const collect = async (includeTitles: boolean) => {
-	const { ALERTS_PAGE, DATE_SELECTOR, CHILD_CLASSNAME, ALERTS_SELECTOR } = process.env;
+	const { ALERTS_PAGE, DATE_SELECTOR, CHILD_CLASSNAME, ALERTS_SELECTOR, KEYWORDS } = process.env;
 	const pages = JSON.parse(ALERTS_PAGE!);
 	const alerts = [];
 
@@ -10,7 +10,8 @@ export const collect = async (includeTitles: boolean) => {
 			url: page,
 			dateSelector: DATE_SELECTOR!,
 			childClassName: CHILD_CLASSNAME!,
-			contentSelector: ALERTS_SELECTOR!
+			contentSelector: ALERTS_SELECTOR!,
+			keywordsString: KEYWORDS!
 		});
 
 		if (includeTitles) {
