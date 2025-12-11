@@ -32,8 +32,8 @@
 	},
 	"type": "module",
 	"devDependencies": {
-		"@types/node": "24.10.1",
-		"@vercel/node": "5.5.11",
+		"@types/node": "24.10.3",
+		"@vercel/node": "5.5.15",
 		"dotenv": "17.2.3",
 		"typescript": "5.9.3"
 	}
