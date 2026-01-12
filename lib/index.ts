@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio';
-import { SendSmtpEmail, CreateSmtpEmail, TransactionalEmailsApi } from '@sendinblue/client';
+import { SendSmtpEmail, CreateSmtpEmail, TransactionalEmailsApi } from '@getbrevo/brevo';
 
 import type { IncomingMessage } from 'node:http';
 
