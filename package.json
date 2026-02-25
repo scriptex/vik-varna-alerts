@@ -27,7 +27,7 @@
 		"send-email": "yarn build && node ./scripts/send-email.mjs"
 	},
 	"dependencies": {
-		"@getbrevo/brevo": "^3.0.1",
+		"@getbrevo/brevo": "^4.0.0",
 		"cheerio": "1.2.0"
 	},
 	"type": "module",
