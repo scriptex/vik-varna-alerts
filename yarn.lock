@@ -465,10 +465,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.3.0.tgz#d06bbb384ebcf6c505fde1c3d0ed4ddffe0aaff8"
   integrity sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==
 
-"@vercel/build-utils@13.14.2":
-  version "13.14.2"
-  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-13.14.2.tgz#7863d9d5d4120f05ee6bd3b9d1e85adeb9f9d6c5"
-  integrity sha512-L1wHzpSXVcaXji5+ylNV5yTpAKf/t6qEGNOdFrMSAqSWlcYtL9rrY1OFbqN+5gIAWXjdCqnkmBRVp1lk20uwdw==
+"@vercel/build-utils@13.20.0":
+  version "13.20.0"
+  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-13.20.0.tgz#c1a9d2851bc7706de9901f5d70bc4e94a19a08ca"
+  integrity sha512-Jd29k42KSCRKOs+oSSVthw4xSjZBK3pUDG6AZl95/TsvIDNwRkjI2Nvs1ZcYDJdeLR346PQdWReFJGqkf/tb6A==
   dependencies:
     "@vercel/python-analysis" "0.11.0"
     cjs-module-lexer "1.2.3"
@@ -497,16 +497,16 @@
     picomatch "^4.0.2"
     resolve-from "^5.0.0"
 
-"@vercel/node@5.7.4":
-  version "5.7.4"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-5.7.4.tgz#433727ac3b25863c1aeb2049e06d963f5e281859"
-  integrity sha512-pSU3hl7fSPPD/0W0RzwbogFTiTUT+LDIu0+qOdd/ZZAPQauefs09KQiRZGkt3oPmKnAWTvoQv/Ea4dWZcE9ijQ==
+"@vercel/node@5.7.13":
+  version "5.7.13"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-5.7.13.tgz#b2f50e5aa7e85890d0bf6e6b3db3c01b93c01fb0"
+  integrity sha512-IbGplZ0lAvk6D4scBENKRLOjVbLa3knA3nDJL/1tmcy32UeWRdumo/YpoNMYo3Eg6y6uLtI1ajwpnQJsfzUtjg==
   dependencies:
     "@edge-runtime/node-utils" "2.3.0"
     "@edge-runtime/primitives" "4.1.0"
     "@edge-runtime/vm" "3.2.0"
     "@types/node" "20.11.0"
-    "@vercel/build-utils" "13.14.2"
+    "@vercel/build-utils" "13.20.0"
     "@vercel/error-utils" "2.0.3"
     "@vercel/nft" "1.5.0"
     "@vercel/static-config" "3.2.0"
@@ -863,10 +863,10 @@ domutils@^3.0.1, domutils@^3.2.2:
     domelementtype "^2.3.0"
     domhandler "^5.0.3"
 
-dotenv@17.4.1:
-  version "17.4.1"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-17.4.1.tgz#d8e2179fe287365ef3aecb9459668454168eda88"
-  integrity sha512-k8DaKGP6r1G30Lx8V4+pCsLzKr8vLmV2paqEj1Y55GdAgJuIqpRp5FfajGF8KtwMxCz9qJc6wUIJnm053d/WCw==
+dotenv@17.4.2:
+  version "17.4.2"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-17.4.2.tgz#c07e54a746e11eba021dd9e1047ced5afdc1c034"
+  integrity sha512-nI4U3TottKAcAD9LLud4Cb7b2QztQMUEfHbvhTH09bqXTxnSie8WnjPALV/WMCrJZ6UV/qHJ6L03OqO3LcdYZw==
 
 dunder-proto@^1.0.1:
   version "1.0.1"
