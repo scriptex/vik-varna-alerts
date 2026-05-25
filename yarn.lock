@@ -465,10 +465,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.3.0.tgz#d06bbb384ebcf6c505fde1c3d0ed4ddffe0aaff8"
   integrity sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==
 
-"@vercel/build-utils@13.23.0":
-  version "13.23.0"
-  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-13.23.0.tgz#5b63eac49d9cb79b8aba123ffe8946c59117de1e"
-  integrity sha512-L4rmRCy8m1jrlwOJ0Yp0urRPHuLuE8BIP35x3K0NTcuB0R4mvhTf9AMyvGwYNhDp/zuOg1AeKM9ghzunXjJ/+g==
+"@vercel/build-utils@13.26.1":
+  version "13.26.1"
+  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-13.26.1.tgz#bb6b61a22fb3a14167d9b4b00de54c5201fa7a70"
+  integrity sha512-vMdSJ0U2YVkBWfSEHEj9WOuI8g52ozlluAiZhAGh2osGNYrD+w7IsvhLWXseFsAEr7v2rNTkY9nbrfgYiHYA+Q==
   dependencies:
     "@vercel/python-analysis" "0.11.1"
     cjs-module-lexer "1.2.3"
@@ -497,16 +497,16 @@
     picomatch "^4.0.2"
     resolve-from "^5.0.0"
 
-"@vercel/node@5.8.0":
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-5.8.0.tgz#2dadb9037dfb4e10ecd5926e5422e5dccc00bda0"
-  integrity sha512-gmaH1KmcpKOd424AzGD/WkkDOShXt9/UBgmvA/xRbjVk1AlVqZVYIpHxbZOdP4D5lJBs5o8JYtsvNQ637IiILQ==
+"@vercel/node@5.8.4":
+  version "5.8.4"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-5.8.4.tgz#4e5f35a01f6ca505427a1d921847dc80a93719b7"
+  integrity sha512-YY1sr6Vd32PL11cwMhmt7qhcAmqxbITNNq9JPLFpI0xWlr7Aiu81fgyTCV32mJvPq//NTgMumVI1hQFnojtfNQ==
   dependencies:
     "@edge-runtime/node-utils" "2.3.0"
     "@edge-runtime/primitives" "4.1.0"
     "@edge-runtime/vm" "3.2.0"
     "@types/node" "20.11.0"
-    "@vercel/build-utils" "13.23.0"
+    "@vercel/build-utils" "13.26.1"
     "@vercel/error-utils" "2.1.0"
     "@vercel/nft" "1.5.0"
     "@vercel/static-config" "3.3.0"
