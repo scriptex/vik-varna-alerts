@@ -35,6 +35,6 @@
 		"@types/node": "25.9.3",
 		"@vercel/node": "5.8.17",
 		"dotenv": "17.4.2",
-		"typescript": "5.9.3"
+		"typescript": "6.0.3"
 	}
 }
