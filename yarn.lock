@@ -564,10 +564,10 @@
   dependencies:
     undici-types "~5.26.4"
 
-"@types/node@25.9.6":
-  version "25.9.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.9.6.tgz#47865018f9a5635f161ec69c041385edb15d78fe"
-  integrity sha512-JR6Q/PV5DKFvjrGFVqQJdeG0qvsqQQLDa3TzFrqVwhqRXqwNaxPo2KYCtCQXpOdIulCouKwT7a6in9nFthBAzw==
+"@types/node@25.9.8":
+  version "25.9.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.9.8.tgz#a460865b194c2c416a8f11841613207848b92583"
+  integrity sha512-VfMrScDmMhUJQmd5hArdQnFvK0OIeD36uN2Va1FcpYaLB/BgkgM8Ulc50XtYISPMz7APJ30+N0T5EM0jlcdfRw==
   dependencies:
     undici-types ">=7.24.0 <7.24.7"
 
@@ -599,10 +599,10 @@
     picomatch "^4.0.2"
     resolve-from "^5.0.0"
 
-"@vercel/node@13.0.0":
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-13.0.0.tgz#9623cb5de681e4ffa3709b5acf09bd4cf8907df5"
-  integrity sha512-GWcW5Ga4n20bewF+kuUvCbgOgCBgK9uKKvOGdDLQ4fhLMDShIwCWmHFcxqOTvNFgeYSD/0CeY3Anwxij2MUrLQ==
+"@vercel/node@13.0.2":
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-13.0.2.tgz#dbe0c0f28feef15e61dde9351ac3caf46943f3c4"
+  integrity sha512-I9SLeVk1GOLqXd1GClb5FcA0nqZ7nTNeLSZp+lIJ5gUFrCTV833kogicoW8hhLXQ5/LSV0Bi0J0S7aNWlmgv6g==
   dependencies:
     "@edge-runtime/node-utils" "2.3.0"
     "@edge-runtime/primitives" "4.1.0"
