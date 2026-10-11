@@ -564,10 +564,10 @@
   dependencies:
     undici-types "~5.26.4"
 
-"@types/node@25.9.8":
-  version "25.9.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.9.8.tgz#a460865b194c2c416a8f11841613207848b92583"
-  integrity sha512-VfMrScDmMhUJQmd5hArdQnFvK0OIeD36uN2Va1FcpYaLB/BgkgM8Ulc50XtYISPMz7APJ30+N0T5EM0jlcdfRw==
+"@types/node@25.9.9":
+  version "25.9.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.9.9.tgz#19f1b689ab7558ed910664b6078113b8abbef1d0"
+  integrity sha512-b4e2xxj/yMeT2hNlD6x7zNFiQK2Dlmkb9CQ6v3/1G2RezKN4YS2lcEv8lzGm1mhs4f2lM4yNAMI/zUDBZBBt7w==
   dependencies:
     undici-types ">=7.24.0 <7.24.7"
 
@@ -599,10 +599,10 @@
     picomatch "^4.0.2"
     resolve-from "^5.0.0"
 
-"@vercel/node@16.0.1":
-  version "16.0.1"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-16.0.1.tgz#060c88213812ce78a9fbfba1b12e74a66637a960"
-  integrity sha512-jWNlamCPNCv1USW1oMGujpRX3VAmiBUi0zfqA3grYt8H3KCzrm3gKRyzH6NmztfEdtYbTgEAaGJYvuQiCUKDuQ==
+"@vercel/node@16.0.2":
+  version "16.0.2"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-16.0.2.tgz#629d8db9b58791d04cd80500e17300a896af0069"
+  integrity sha512-96QPNY0D2hCL2aYWMAnAz6ElhxYW0nE7husjVVbJvnT7oBG8GaigkBQUm4/dxL+IbYHA7S1IXPvhJfPZQcwDNA==
   dependencies:
     "@edge-runtime/node-utils" "2.3.0"
     "@edge-runtime/primitives" "4.1.0"
@@ -610,7 +610,7 @@
     "@types/node" "20.11.0"
     "@vercel/error-utils" "2.2.1"
     "@vercel/nft" "1.10.0"
-    "@vercel/static-config" "3.4.3"
+    "@vercel/static-config" "3.4.4"
     async-listen "3.0.0"
     cjs-module-lexer "1.2.3"
     edge-runtime "2.5.9"
@@ -626,10 +626,10 @@
     typescript "npm:typescript@5.9.3"
     undici "5.28.4"
 
-"@vercel/static-config@3.4.3":
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/@vercel/static-config/-/static-config-3.4.3.tgz#7dcd7491977a4b59b0b429b163f66b86f67bc935"
-  integrity sha512-BY1sL8rNJvIm3TK/8TQ+Q6jIx7NpO5xckQzv7s6c1ypHvRnTl+vf6rmgY5WFXmoYDeGm3tMy4jiy/5M/5jGr/g==
+"@vercel/static-config@3.4.4":
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/@vercel/static-config/-/static-config-3.4.4.tgz#5019f81d5ef36fc8342b07d0fc9d053ee4cd87b8"
+  integrity sha512-WppaPyEKQhO8qo5gVee3mSo1QSCgDZaUcUDHrqICSlt90oYeC/SHTmKCPWY1x1NB9hU+kR2oDzJwAeRKKv5NIw==
   dependencies:
     ajv "8.6.3"
     json-schema-to-ts "1.6.4"
@@ -960,10 +960,10 @@ domutils@^3.0.1, domutils@^3.2.2:
     domelementtype "^2.3.0"
     domhandler "^5.0.3"
 
-dotenv@18.0.4:
-  version "18.0.4"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-18.0.4.tgz#419bbe784f30915bfeb10e2d407e13ca5528504f"
-  integrity sha512-jGt9uI5BIxpVO15kvy+iEFqNAwxYClKWnkptLjSNPnFLC003Imd0ofr3aEVsbpHdSBdSsbcApNIlz4nbyGMwdA==
+dotenv@18.0.7:
+  version "18.0.7"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-18.0.7.tgz#ee6bec88c59298d9b218acdf49377f2c110a7698"
+  integrity sha512-QEvMEF8ca3GNZJJnAbOgxpj5ULhBvnMcURp+XKrtvqFNPgjBvYoswQ0Jl2cO7JzCjxZjJhr9ZuIEhlrRxMft/Q==
 
 dunder-proto@^1.0.1:
   version "1.0.1"
